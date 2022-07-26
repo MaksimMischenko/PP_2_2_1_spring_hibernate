@@ -23,7 +23,11 @@ public class User {
     @JoinColumn()
     private Car car;
 
-    public User(String user2, String lastname2, String s, Car audi) {
+    public User(String firstName, String lastName, String email, Car car) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.email = email;
+        this.car = car;
     }
 
     public User(String firstName, String lastName, String email) {

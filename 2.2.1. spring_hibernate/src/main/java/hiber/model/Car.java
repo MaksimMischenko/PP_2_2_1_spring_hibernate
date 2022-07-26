@@ -16,7 +16,16 @@ public class Car {
     @Column(name = "series")
     private int series;
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
     @OneToOne(mappedBy = "car", cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User user;
 
     public Car(String model, int series) {
@@ -26,6 +35,14 @@ public class Car {
 
     public Car() {
 
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "model='" + model + '\'' +
+                ", series=" + series +
+                '}';
     }
 
     public long getId() {
