@@ -1,11 +1,12 @@
 package hiber.model;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
 @Data
+@NoArgsConstructor
 @Table(name = "users")
 public class User {
 
@@ -31,9 +32,5 @@ public class User {
         this.lastName = lastName;
         this.email = email;
         this.car = car;
-    }
-
-    public User() {
-
     }
 }

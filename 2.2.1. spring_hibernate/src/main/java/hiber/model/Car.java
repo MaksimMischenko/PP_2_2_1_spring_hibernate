@@ -6,6 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Data
+@NoArgsConstructor
 @Table(name = "cars")
 public class Car {
     @Id
@@ -27,9 +28,5 @@ public class Car {
     public Car(String model, int series) {
         this.model = model;
         this.series = series;
-    }
-
-    public Car() {
-
     }
 }
