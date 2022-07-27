@@ -17,15 +17,13 @@ public class UserDaoImp implements UserDao {
 
     private final SessionFactory sessionFactory;
 
-    @Transactional
     @Override
-    public void add(User user) {
+    public void addUser(User user) {
         sessionFactory.getCurrentSession().save(user);
     }
 
-    @Transactional
     @Override
-    public List<User> listUsers() {
+    public List<User> getFromUsers() {
         TypedQuery<User> query = sessionFactory.getCurrentSession().createQuery("from User");
         return query.getResultList();
     }
