@@ -32,7 +32,6 @@ public class MainApp {
             System.out.println("Last Name = " + user1.getLastName());
             System.out.println("Email = " + user1.getEmail());
             System.out.println("model= " + user1.getCar());
-
             System.out.println();
         }
         context.close();

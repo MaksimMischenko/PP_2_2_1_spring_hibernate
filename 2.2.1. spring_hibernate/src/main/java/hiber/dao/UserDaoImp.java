@@ -30,7 +30,6 @@ public class UserDaoImp implements UserDao {
         return query.getResultList();
     }
 
-    @Transactional
     @Override
     public List<User> getUserCar(String model, int series) {
         Query query = sessionFactory.getCurrentSession()
